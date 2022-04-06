@@ -7,7 +7,6 @@ export default function Test() {
   const [data, setData] = useState([])
   // State with list of all checked item
   const [checked, setChecked] = useState([]);
-  const checkList = ["Apple", "Banana", "Tea", "Coffee"];
   useEffect(() => {
           fetch("https://624c52f7d71863d7a8084ea7.mockapi.io/country")
           .then((data) => data.json())
