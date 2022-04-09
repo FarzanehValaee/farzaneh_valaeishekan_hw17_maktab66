@@ -14,11 +14,12 @@ export default function Test() {
   },[])
   // Add/Remove checked item from list
   const handleCheck = (event) => {
-    var updatedList = [...checked];
+    let updatedList = [...checked];
+    let targetValue= data[event.target.id-1].name;
     if (event.target.checked) {
-      updatedList = [...checked, event.target.value];
+      updatedList = [...checked, targetValue];
     } else {
-      updatedList.splice(checked.indexOf(event.target.value), 1);
+      updatedList.splice(checked.indexOf(targetValue), 1);
     }
     setChecked(updatedList);
   };
